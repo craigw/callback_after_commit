@@ -1,0 +1,22 @@
+CallbackAfterCommit
+===================
+
+Based on the code here:
+
+  http://rubyurl.com/4Jo6
+
+
+Example
+=======
+
+    class Animal < ActiveRecord::Base
+      after_commit :log_commit
+
+      private
+      def log_commit
+        logger.debug "COMMITTED Animal##{id}"
+      end
+    end
+
+
+Copyright (c) 2009 Craig R Webster, released under the MIT license

@@ -1,0 +1,1 @@
+require File.dirname(__FILE__) + '/lib/callback_after_commit'
